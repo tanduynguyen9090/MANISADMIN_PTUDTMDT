@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"> <!-- Thiết lập bảng mã UTF-8 -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> <!-- Cấu hình hiển thị trên thiết bị di động -->
+  <title>TatCaSanPham-Admin</title> <!-- Tiêu đề trang web -->
+  <!-- Meta tags mô tả và từ khóa -->
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+   <!-- Favicons cho trình duyệt và thiết bị của Apple -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Liên kết đến các file CSS từ các thư viện khác nhau -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Liên kết đến file CSS chính của trang web -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap copy/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/datatables/datatables.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+  <!-- Template Information --> 
+  <!-- Thông tin về template được sử dụng -->
+  <!-- Tên, phiên bản, URL, tác giả, và giấy phép -->
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+   <!-- ======= Header ======= -->
+ <header id="header" class="header fixed-top d-flex align-items-center">
+  <!-- Phần container chứa các phần tử header -->
+  <div class="d-flex align-items-center justify-content-between">
+    <a href="DieuKhien.html" class="logo d-flex align-items-center"> <!-- Liên kết đến trang chủ -->
+       <!-- Logo của trang web -->
+      <img width="230px" src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/385538843_734726671404802_8380323164681364303_n.png?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=vLsHRT2ljrwAX9ZqJc0&_nc_pt=1&_nc_ht=scontent.fsgn2-5.fna&oh=03_AdQbjj0ZjQyAbzdYn7f7m-zPD7vPH-G5TGqkjbjMOSem7Q&oe=65A49C01" alt="">
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i> <!-- Icon để mở/closed thanh sidebar (thanh bên) -->
+  </div>
+</header> <!-- Kết thúc Header -->
+
+<aside id="sidebar" class="sidebar">
+  <!-- Phần Sidebar: Chứa các mục điều hướng -->
+     <ul class="sidebar-nav" id="sidebar-nav"> <!-- Danh sách mục điều hướng -->
+       <li class="nav-item">  <!-- Mục điều hướng cho Dashboard -->
+         <a class="nav-link collapsed" href="DieuKhien.html">
+           <i class="bi bi-grid"></i>
+           <span>Dashboard</span>
+         </a>
+       </li><!-- Kết thúc Dashboard Nav -->
+       <li class="nav-item"> <!-- Mục điều hướng cho Quản lý sản phẩm -->
+         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+           <i class="bi bi-journal-text"></i><span>Quản lý sản phẩm</span><i class="bi bi-chevron-down ms-auto"></i>
+         </a>
+         <ul id="forms-nav" class="nav-content" data-bs-parent="#sidebar-nav">
+            <!-- Danh sách con cho Quản lý sản phẩm (collapsed) -->
+           <li> <!-- Mục con: Tất cả sản phẩm -->
+             <a href="TatCaSanPham.html" class="active">
+               <i class="bi bi-circle"></i><span>Tất cả sản phẩm</span>
+             </a>
+           </li>
+           <li> <!-- Mục con: Thêm sản phẩm mới -->
+             <a href="ThemSP.html">
+               <i class="bi bi-circle"></i><span>Thêm sản phẩm mới</span>
+             </a>
+           </li>
+         </ul>
+       </li><!-- Kết thúc Forms Nav -->
+        <!-- Mục điều hướng cho Quản lý mã giảm giá -->
+       <li class="nav-item">
+         <a class="nav-link collapsed" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">
+           <i class="bi bi-journal-text"></i><span>Quản lý mã giảm giá</span><i class="bi bi-chevron-down ms-auto"></i>
+         </a>
+         <!-- Danh sách con cho Quản lý mã giảm giá (collapsed) -->
+         <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+           <li> <!-- Mục con: Tất cả mã giảm giá -->
+             <a href="TatCaMaGiamGia.html">
+               <i class="bi bi-circle"></i><span>Tất cả mã giảm giá</span>
+             </a>
+           </li>
+           <li><!-- Mục con: Thêm mã giảm giá -->
+             <a href="ThemMaGiamGia.html">
+               <i class="bi bi-circle"></i><span>Thêm mã giảm giá</span>
+             </a>
+           </li>
+         </ul>
+       </li><!-- Kết thúc Forms Nav -->
+       <!-- Mục điều hướng cho Thống kê -->
+       <li class="nav-item">
+         <a class="nav-link collapsed" href="ThongKe.html">
+           <i class="bi bi-bar-chart"></i>
+           <span>Thống kê</span>
+         </a>
+       </li><!-- Kết thúc Sidebar Nav -->
+     </ul>
+   </aside><!-- Kết thúc Sidebar -->
+<!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
+  <main id="main" class="main">
+    
+    <div class="pagetitle">
+      <h1>QUẢN LÝ SẢN PHẨM
+        <a href="ThemSP.html" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-plus-circle"></i> Thêm sản phẩm</a>
+      </h1>
+      
+    </div><!--Kết thúc tiêu đề trang -->
+    
+    <section class="section dashboard">
+      <!-- DS SẢN PHẨM -->
+      <div class="col-12"><!--Tạo một cột chiếm toàn bộ chiều rộng trong hệ thống grid.-->
+        <!--ạo một thẻ card có chứa danh sách sản phẩm, với khả năng cuộn nếu nội dung vượt quá kích thước của thẻ.-->
+        <div class="card top-selling overflow-auto">
+          <!--Phần thân của thẻ card với padding dưới (pb-0) để giảm khoảng cách dưới.-->
+          <div class="card-body pb-0">
+            <!--Tiêu đề của thẻ card-->
+            <h5 class="card-title">TẤT CẢ SẢN PHẨM</h5>
+            <!-- Bảng để hiển thị thông tin sản phẩm, sử dụng các lớp của Bootstrap và có thể sử dụng plugin DataTables.-->
+            <table class="table table-borderless datatable">
+              <!--Phần đầu của bảng, chứa các thẻ <tr> (dòng) và <th> (cột tiêu đề).
+                Các <th> chứa tiêu đề cho từng cột trong bảng (Hình, Tên sản phẩm, Mã SKU, Danh mục sản phẩm, Giá, Số lượng).-->
+              <thead>
+                <tr>
+                  <th scope="col">Hình</th>
+                  <th scope="col">Tên sản phẩm</th>
+                  <th scope="col">Mã SKU</th>
+                  <th scope="col">Danh mục sản phẩm</th>
+                  <th scope="col">Giá (VND)</th>
+                  <th scope="col">Số lượng</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody> <!--Phần chính của bảng, chứa các dòng thông tin thực tế về sản phẩm.-->
+                <tr><!--Mỗi dòng trong bảng.-->
+                  <!--Cột chứa hình ảnh sản phẩm với một liên kết.-->
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <!--Cột chứa tên sản phẩm với một liên kết và văn bản được định dạng để làm nổi bật.-->
+                  <td><a href="#" class="text-primary fw-bold">Bộ Sản Phẩm Bạc 925 Hồ Điệp Đa Sắc</a></td>
+                  <td>GP_001</td><!--Cột chứa mã SKU của sản phẩm.-->
+                  <!--: Cột chứa danh mục sản phẩm với một liên kết và văn bản được định dạng để làm nổi bật.-->
+                  <td><a href="#" class="text-primary">Vòng tay, Dây chuyền</a></td>
+                  <td>258.000</td><!--Cột chứa giá của sản phẩm.-->
+                  <td>100</td><!--Cột chứa số lượng sản phẩm.-->
+                  <td class="text-end"><!--Cột cuối cùng, được căn phải.-->
+                    <!--Nút chỉnh sửa với biểu tượng bút (sử dụng Font Awesome).-->
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <!--Nút xóa với biểu tượng thùng rác (sử dụng Font Awesome).-->
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Dây Chuyền 925 Bông Tuyết Đính Đá</a></td>
+                  <td>DC_001</td>
+                  <td><a href="#" class="text-primary">Dây chuyền</a></td>
+                  <td>135.000</td>
+                  <td>95</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Dây Chuyền 925 Cánh Thiên Thần Đổi Màu</a></td>
+                  <td>DC_002</td>
+                  <td><a href="#" class="text-primary">Dây chuyền</a></td>
+                  <td>185.000</td>
+                  <td>57</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Khuyên tai Daisy Tiny</a></td>
+                  <td>KT_001</td>
+                  <td><a href="#" class="text-primary">Khuyên tai</a></td>
+                  <td>85.000</td>
+                  <td>121</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Vòng Tay Bạc 925 Hình Mặt Trăng, Ngôi Sao</a></td>
+                  <td>VT_001</td>
+                  <td><a href="#" class="text-primary">Vòng tay</a></td>
+                  <td>165.000</td>
+                  <td>111</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Vòng Tay Bạc 925 Hồ Điệp Đá Đa Sắc</a></td>
+                  <td>VT_002</td>
+                  <td><a href="#" class="text-primary">Vòng tay</a></td>
+                  <td>105.000</td>
+                  <td>75</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+                 <!--Điều chỉnh như bên trên-->
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Nhẫn Bạc Trơn Tròn Hở, Basic Xinh Xắn</a></td>
+                  <td>NH_001</td>
+                  <td><a href="#" class="text-primary">Nhẫn</a></td>
+                  <td>100.000</td>
+                  <td>85</td>
+                  <td class="text-end">
+                    <a href="ChinhSuaSP.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+                </tr>
+              </table>
+          </div>
+        </div>
+      </div>
+    
+    </main><!-- Phần chính -->
+
+    <!-- ======= Chân trang ======= -->
+  
+      <footer id="footer" class="footer">
+        <!--Thẻ <strong> đánh dấu một vùng với văn bản được làm nổi bật hơn, và <span> được sử dụng để nhóm một phần của văn bản để áp dụng các hiệu ứng CSS hoặc xử lý bằng JavaScript. 
+          "Manis Jewelry" là tên đơn vị, và "All Rights Reserved" là thông điệp bảo vệ quyền sở hữu.-->
+        <div class="copyright">
+          &copy; Copyright <strong><span>Manis Jewelry</span></strong>. All Rights Reserved
+        </div>
+    
+      </footer><!-- Kết thúc chân trang -->
+    
+      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    
+      <!--Link tới các thư viện bên ngoài-->
+      <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+      <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="assets/vendor/chart.js/chart.min.js"></script>
+      <script src="assets/vendor/echarts/echarts.min.js"></script>
+      <script src="assets/vendor/quill/quill.min.js"></script>
+      <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+      <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+      <script src="assets/vendor/php-email-form/validate.js"></script>
+    
+      <!-- Tệp chính của trang web, chứa mã JavaScript tùy chỉnh và các tác vụ xử lý sự kiện. -->
+      <script src="assets/js/main.js"></script>
+  
+  </body>
+  
+  </html>

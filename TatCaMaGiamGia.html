@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"> <!-- Thiết lập bảng mã UTF-8 -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> <!-- Cấu hình hiển thị trên thiết bị di động -->
+  <title>TatCaMaGiamGia-Admin</title> <!-- Tiêu đề trang web -->
+  <!-- Meta tags mô tả và từ khóa -->
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+   <!-- Favicons cho trình duyệt và thiết bị của Apple -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Liên kết đến các file CSS từ các thư viện khác nhau -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Liên kết đến file CSS chính của trang web -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap copy/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/datatables/datatables.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+  <!-- Template Information -->
+  <!-- Thông tin về template được sử dụng -->
+  <!-- Tên, phiên bản, URL, tác giả, và giấy phép -->
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+ <!-- ======= Header ======= -->
+ <header id="header" class="header fixed-top d-flex align-items-center">
+  <!-- Phần container chứa các phần tử header -->
+  <div class="d-flex align-items-center justify-content-between">
+    <a href="DieuKhien.html" class="logo d-flex align-items-center"> <!-- Liên kết đến trang chủ -->
+       <!-- Logo của trang web -->
+      <img width="230px" src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/385538843_734726671404802_8380323164681364303_n.png?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=vLsHRT2ljrwAX9ZqJc0&_nc_pt=1&_nc_ht=scontent.fsgn2-5.fna&oh=03_AdQbjj0ZjQyAbzdYn7f7m-zPD7vPH-G5TGqkjbjMOSem7Q&oe=65A49C01" alt="">
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn"></i> <!-- Icon để mở/closed thanh sidebar (thanh bên) -->
+  </div>
+</header> <!-- Kết thúc Header -->
+
+<aside id="sidebar" class="sidebar">
+  <!-- Phần Sidebar: Chứa các mục điều hướng -->
+     <ul class="sidebar-nav" id="sidebar-nav"> <!-- Danh sách mục điều hướng -->
+       <li class="nav-item">  <!-- Mục điều hướng cho Dashboard -->
+         <a class="nav-link collapsed" href="DieuKhien.html">
+           <i class="bi bi-grid"></i>
+           <span>Dashboard</span>
+         </a>
+       </li><!-- Kết thúc Dashboard Nav -->
+       <li class="nav-item"> <!-- Mục điều hướng cho Quản lý sản phẩm -->
+         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+           <i class="bi bi-journal-text"></i><span>Quản lý sản phẩm</span><i class="bi bi-chevron-down ms-auto"></i>
+         </a>
+         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <!-- Danh sách con cho Quản lý sản phẩm (collapsed) -->
+           <li> <!-- Mục con: Tất cả sản phẩm -->
+             <a href="TatCaSanPham.html">
+               <i class="bi bi-circle"></i><span>Tất cả sản phẩm</span>
+             </a>
+           </li>
+           <li> <!-- Mục con: Thêm sản phẩm mới -->
+             <a href="ThemSP.html">
+               <i class="bi bi-circle"></i><span>Thêm sản phẩm mới</span>
+             </a>
+           </li>
+         </ul>
+       </li><!-- Kết thúc Forms Nav -->
+        <!-- Mục điều hướng cho Quản lý mã giảm giá -->
+       <li class="nav-item">
+         <a class="nav-link" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">
+           <i class="bi bi-journal-text"></i><span>Quản lý mã giảm giá</span><i class="bi bi-chevron-down ms-auto"></i>
+         </a>
+         <!-- Danh sách con cho Quản lý mã giảm giá (collapsed) -->
+         <ul id="forms-nav1" class="nav-content collapsed " data-bs-parent="#sidebar-nav">
+           <li> <!-- Mục con: Tất cả mã giảm giá -->
+             <a href="TatCaMaGiamGia.html" class="active">
+               <i class="bi bi-circle"></i><span>Tất cả mã giảm giá</span>
+             </a>
+           </li>
+           <li><!-- Mục con: Thêm mã giảm giá -->
+             <a href="ThemMaGiamGia.html">
+               <i class="bi bi-circle"></i><span>Thêm mã giảm giá</span>
+             </a>
+           </li>
+         </ul>
+       </li><!-- Kết thúc Forms Nav -->
+       <!-- Mục điều hướng cho Thống kê -->
+       <li class="nav-item">
+         <a class="nav-link collapsed" href="ThongKe.html">
+           <i class="bi bi-bar-chart"></i>
+           <span>Thống kê</span>
+         </a>
+       </li><!-- Kết thúc Sidebar Nav -->
+     </ul>
+   </aside><!-- Kết thúc Sidebar -->
+<!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>QUẢN LÝ MÃ GIẢM GIÁ
+        <a href="ThemMaGiamGia.html" class="btn btn-sm btn-outline-primary float-end"><i class="fas fa-plus-circle"></i> Thêm Mã giảm giá</a>
+      </h1>
+      
+    </div><!-- Kết thúc tiêu đề trang -->
+    <div class="card">
+      <!-- Tạo một bảng với độ rộng 100% và sử dụng các lớp của Bootstrap (table, table-borderless, datatable). 
+        Lớp datatable có thể chỉ định rằng bảng này sẽ sử dụng plugin DataTables.-->
+        <table width="100%" class="table table-borderless datatable" id="dataTables-example">
+            <!--: Phần đầu của bảng, chứa các thẻ <tr> (dòng) và <th> (cột tiêu đề).
+              Các <th> chứa tiêu đề cho từng cột trong bảng (Mã giảm giá, Mô tả, Điều kiện, Ngày hết hạn, Số lượng).-->
+          <thead>
+                <tr><!--Mỗi dòng trong bảng.-->
+                    <th>Mã giảm giá</th>
+                    <th>Mô tả</th>
+                    <th>Điều kiện</th>
+                    <th>Ngày hết hạn</th>
+                    <th>Số lượng</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody> <!--Phần chính của bảng, chứa các dòng thông tin thực tế.-->
+                <tr> <!--Mỗi dòng trong bảng.-->
+                    <th><a href="">MANISGIAM10</a></th> <!--Cột chứa mã giảm giá với một liên kết. Liên kết này có thể dẫn đến một trang chi tiết hoặc hành động cụ thể.-->
+                    <td>Giảm 10% Giảm tối đa 150k</td><!--Cột mô tả của mã giảm giá.-->
+                    <td>Đơn tối thiểu 400k</td><!--Cột chứa điều kiện áp dụng mã giảm giá.-->
+                    <td>24/12/2023</td><!--Cột hiển thị ngày hết hạn của mã giảm giá.-->
+                    <td>1000</td><!-- Cột hiển thị số lượng mã giảm giá còn lại.-->
+                    <td class="text-end"><!--Cột cuối cùng, được căn phải.-->
+                      <!--Nút chỉnh sửa với biểu tượng bút (sử dụng Font Awesome).-->
+                        <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                      <!-- Nút xóa với biểu tượng thùng rác (sử dụng Font Awesome).-->
+                        <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+                <!--Điều chỉnh như trên-->
+                <tr>
+                  <th><a href="">MANISGIAM20K</a></th>
+                  <td>Giảm 20k</td>
+                  <td>Đơn tối thiểu 120k</td>
+                  <td>24/12/2023</td>
+                  <td>1000</td>
+                  <td class="text-end">
+                      <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                      <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                  </td>
+              </tr>
+              <!--Điều chỉnh như trên-->
+              <tr>
+                <th><a href="">MANISGIAM12</a></th>
+                <td>Giảm 12% Giảm tối đa 120k</td>
+                <td>Đơn tối thiểu 1000k</td>
+                <td>24/12/2023</td>
+                <td>1000</td>
+                <td class="text-end">
+                    <a href="ChinhSuaMaGiamGia.html" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                    <a href="" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                </td>
+            </tr>
+                
+            </tbody>
+        </table>
+    </div>
+
+    
+
+  </main><!-- Phần chính -->
+
+  <!-- ======= Chân trang ======= -->
+    <footer id="footer" class="footer">
+      <!--Thẻ <strong> đánh dấu một vùng với văn bản được làm nổi bật hơn, và <span> được sử dụng để nhóm một phần của văn bản để áp dụng các hiệu ứng CSS hoặc xử lý bằng JavaScript. 
+        "Manis Jewelry" là tên đơn vị, và "All Rights Reserved" là thông điệp bảo vệ quyền sở hữu.-->
+      <div class="copyright">
+        &copy; Copyright <strong><span>Manis Jewelry</span></strong>. All Rights Reserved
+      </div>
+  
+    </footer><!-- Kết thúc chân trang -->
+  
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!--Link tới các thư viện bên ngoài-->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.min.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Tệp chính của trang web, chứa mã JavaScript tùy chỉnh và các tác vụ xử lý sự kiện. -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

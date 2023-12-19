@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"> <!-- Thiết lập bảng mã UTF-8 -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> <!-- Cấu hình hiển thị trên thiết bị di động -->
+  <title>ChinhSuaSanPham-Admin</title> <!-- Tiêu đề trang web -->
+  <!-- Meta tags mô tả và từ khóa -->
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+   <!-- Favicons cho trình duyệt và thiết bị của Apple -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Liên kết đến các file CSS từ các thư viện khác nhau -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Liên kết đến file CSS chính của trang web -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap copy/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/datatables/datatables.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+  <!-- Template Information -->
+  <!-- Thông tin về template được sử dụng -->
+  <!-- Tên, phiên bản, URL, tác giả, và giấy phép -->
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+   <!-- ======= Header ======= -->
+   <header id="header" class="header fixed-top d-flex align-items-center">
+    <!-- Phần container chứa các phần tử header -->
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="DieuKhien.html" class="logo d-flex align-items-center"> <!-- Liên kết đến trang chủ -->
+         <!-- Logo của trang web -->
+        <img width="230px" src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/385538843_734726671404802_8380323164681364303_n.png?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=vLsHRT2ljrwAX9ZqJc0&_nc_pt=1&_nc_ht=scontent.fsgn2-5.fna&oh=03_AdQbjj0ZjQyAbzdYn7f7m-zPD7vPH-G5TGqkjbjMOSem7Q&oe=65A49C01" alt="">
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i> <!-- Icon để mở/closed thanh sidebar (thanh bên) -->
+    </div>
+  </header> <!-- Kết thúc Header -->
+
+  <aside id="sidebar" class="sidebar">
+    <!-- Phần Sidebar: Chứa các mục điều hướng -->
+       <ul class="sidebar-nav" id="sidebar-nav"> <!-- Danh sách mục điều hướng -->
+         <li class="nav-item">  <!-- Mục điều hướng cho Dashboard -->
+           <a class="nav-link collapsed" href="DieuKhien.html">
+             <i class="bi bi-grid"></i>
+             <span>Dashboard</span>
+           </a>
+         </li><!-- Kết thúc Dashboard Nav -->
+         <li class="nav-item"> <!-- Mục điều hướng cho Quản lý sản phẩm -->
+           <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-journal-text"></i><span>Quản lý sản phẩm</span><i class="bi bi-chevron-down ms-auto"></i>
+           </a>
+           <ul id="forms-nav" class="nav-content" data-bs-parent="#sidebar-nav">
+              <!-- Danh sách con cho Quản lý sản phẩm (collapsed) -->
+             <li> <!-- Mục con: Tất cả sản phẩm -->
+               <a href="TatCaSanPham.html" class="active">
+                 <i class="bi bi-circle"></i><span>Tất cả sản phẩm</span>
+               </a>
+             </li>
+             <li> <!-- Mục con: Thêm sản phẩm mới -->
+               <a href="ThemSP.html">
+                 <i class="bi bi-circle"></i><span>Thêm sản phẩm mới</span>
+               </a>
+             </li>
+           </ul>
+         </li><!-- Kết thúc Forms Nav -->
+          <!-- Mục điều hướng cho Quản lý mã giảm giá -->
+         <li class="nav-item">
+           <a class="nav-link collapsed" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-journal-text"></i><span>Quản lý mã giảm giá</span><i class="bi bi-chevron-down ms-auto"></i>
+           </a>
+           <!-- Danh sách con cho Quản lý mã giảm giá (collapsed) -->
+           <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <li> <!-- Mục con: Tất cả mã giảm giá -->
+               <a href="TatCaMaGiamGia.html">
+                 <i class="bi bi-circle"></i><span>Tất cả mã giảm giá</span>
+               </a>
+             </li>
+             <li><!-- Mục con: Thêm mã giảm giá -->
+               <a href="ThemMaGiamGia.html">
+                 <i class="bi bi-circle"></i><span>Thêm mã giảm giá</span>
+               </a>
+             </li>
+           </ul>
+         </li><!-- Kết thúc Forms Nav -->
+         <!-- Mục điều hướng cho Thống kê -->
+         <li class="nav-item">
+           <a class="nav-link collapsed" href="ThongKe.html">
+             <i class="bi bi-bar-chart"></i>
+             <span>Thống kê</span>
+           </a>
+         </li><!-- Kết thúc Sidebar Nav -->
+       </ul>
+     </aside><!-- Kết thúc Sidebar -->
+     <!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
+  <main id="main" class="main">
+    <div class="pagetitle">
+      <h1>Dây Chuyền 925 Bông Tuyết Đính Đá</h1>
+    </div><!-- Tiêu đề trang -->
+    <section class="section">
+      <div class="row"><!--tạo một hàng (row) trong hệ thống grid của Bootstrap.-->
+        <div class="col-lg-12"><!-- chiếm hết chiều rộng trên mọi kích thước màn hình khi màn hình có kích thước lớn hơn hoặc bằng lg (large).-->
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <form>
+                <!--Nhập liệu cho tên sản phẩm-->
+                <div class="row mb-3">
+                  <!-- Đây là một nhãn (<label>) liên kết với một trường nhập liệu (input) có id là "inputText". 
+                    Lớp "col-sm-2" được sử dụng để định dạng nhãn để chiếm 2/12 đơn vị (cột) trên màn hình lớn (>= 576px). 
+                    Lớp "col-form-label" được sử dụng để tạo kiểu cho nhãn.-->
+                  <label for="inputText" class="col-sm-2 col-form-label" >Tên sản phẩm</label>
+                  <div class="col-sm-10"> <!--chiếm 10/12 đơn vị (cột) trong hệ thống grid khi màn hình có kích thước lớn hơn hoặc bằng 576px. Nó chứa trường nhập liệu.-->
+                    <!--Đây là một trường nhập liệu (<input>) kiểu văn bản với lớp "form-control" để có giao diện như là một phần của biểu mẫu. 
+                      value là giá trị mặc định của trường nhập liệu là "Dây Chuyền 925 Bông Tuyết Đính Đá".-->
+                    <input type="text" class="form-control" value="Dây Chuyền 925 Bông Tuyết Đính Đá">
+                  </div>
+                </div>
+                <!--Kết thúc nhập liệu cho tên sản phẩm-->
+
+                <!--Nhập liệu cho mã SKU-->
+                <!--Điều chỉnh như phần nhập liệu cho tên sản phẩm-->
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Mã SKU</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" value="DC_001">
+                  </div>
+                </div>
+                <!--Kết thúc nhập liệu cho tên mã SKU-->
+
+                <!--Nhập liệu cho mô tả sản phẩm-->
+                <!--Điều chỉnh như phần nhập liệu cho tên sản phẩm-->
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Mô tả sản phẩm</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" style="height: 100px">Chất liệu: Bạc S925 (92,5% Bạc và 7,5% kim loại khác sản xuất theo công nghệ Bạc Ý), hàng gia công kĩ bóng đẹp, không han gỉ, không dị ứng, dễ làm sáng và bảo quản.</textarea>
+                  </div>
+                </div>
+                <!--Kết thúc nhập liệu cho tên mô tả sản phẩm-->
+
+                <!--Nhập liệu cho số lượng sản phẩm-->
+                <!--Điều chỉnh như phần nhập liệu cho tên sản phẩm-->
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Số lượng sản phẩm</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control" value="95">
+                  </div>
+                </div>
+                <!--Kết thúc nhập liệu cho số lượng sản phẩm-->
+
+                <!--Nhập liệu cho giá sản phẩm-->
+                <!--Điều chỉnh như phần nhập liệu cho tên sản phẩm-->
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Giá sản phẩm</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" value="135.000">
+                  </div>
+                </div>
+                <!--Kết thúc nhập liệu cho giá sản phẩm-->
+
+                <!--Nhập liệu cho giá khuyến mãi-->
+                <!--Điều chỉnh như phần nhập liệu cho tên sản phẩm-->
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Giá khuyến mãi</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <!--Kết thúc nhập liệu cho giá khuyến mãi-->
+                
+                <!--Nhập liệu cho Danh mục sản phẩm-->
+                <div class="row mb-3">
+                  <!-- Đây là một nhãn (label) dùng để định danh trường nhập liệu. Nó được thiết lập để chiếm 2/12 của hệ thống grid ở kích thước lớn (lg) trở lên 
+                    và sử dụng định dạng của Bootstrap cho các biểu mẫu (form).-->
+                  <label class="col-sm-2 col-form-label">Danh mục sản phẩm</label>
+                  <!-- Đây là một cột dùng để chứa trường nhập liệu. Nó được thiết lập để chiếm 10/12 của hệ thống grid ở kích thước lớn (lg) trở lên.-->
+                  <div class="col-sm-10">
+                    <!-- Đây là một trường chọn (select) của biểu mẫu với lớp "form-select" của Bootstrap. Có một tùy chọn mặc định không có giá trị và sau đó là các tùy chọn khác nhau.-->
+                    <select class="form-select" aria-label="Default select example">
+                      <!--tùy chọn mặc định trong trường chọn, không có giá trị.-->
+                      <option>Chọn danh mục sản phẩm</option>
+                      <!--Đây là một tùy chọn khác trong trường chọn. Nó được đánh dấu là "selected", nghĩa là sẽ được chọn làm giá trị mặc định. Giá trị của nó là "1".-->
+                      <option selected value="1">Dây chuyền</option>
+                      <option value="2">Vòng tay</option>
+                      <option value="3">Nhẫn</option>
+                      <option value="3">Khuyên tai</option>
+                    </select>
+                  </div>
+                </div>
+                <!--Kết thúc nhập liệu cho Danh mục sản phẩm-->
+
+                <!--Nhập liệu cho hình ảnh sản phẩm-->
+                    <div class="row mb-3">
+                      <!-- Nhãn (label) cho trường nhập liệu hình ảnh sản phẩm. 
+                        Được thiết lập để chiếm 2/12 của hệ thống grid ở kích thước lớn (lg) trở lên.-->
+                      <label for="formFile" class="col-sm-2 col-form-label">Hình ảnh sản phẩm</label>
+                      <!--Cột chứa nội dung của trường nhập liệu hình ảnh. 
+                        Chiếm 10/12 của hệ thống grid ở kích thước lớn (lg) trở lên.-->
+                      <div class="col-sm-10">
+                        <!-- Một nút (button) có sự kiện onclick, khi được nhấp, sẽ kích hoạt hàm JavaScript openFileInput(). 
+                          Chức năng của nút này là mở trình chọn tệp tin.-->
+                        <button onclick="openFileInput()">Chọn tệp tin</button>
+                        <a href="">Dây Chuyền 925 Bông Tuyết Đính Đá</a>
+      
+                        <input class="form-control visually-hidden" type="file" id="formFile">
+                        
+                      </div>
+                    </div>
+                    <!--Kết thúc nhập liệu cho hình ảnh sản phẩm-->
+                 <!--Đây là một tệp script, nó là một phần của Bootstrap, giúp cung cấp các tính năng JavaScript của Bootstrap như carousel, modal, dropdown, và nhiều thành phần khác.-->
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+                <script>
+                  //Hàm này được gọi khi người dùng nhấp vào nút "Chọn tệp tin". 
+                  //Nó lấy phần tử trường nhập liệu tệp tin có id là "formFile" và gọi phương thức click() để mở trình chọn tệp tin.
+                  function openFileInput() {
+                    const fileInput = document.getElementById('formFile');
+                    fileInput.click();
+                  }
+                
+                  // Đoạn mã này lắng nghe sự kiện "change" trên trường nhập liệu tệp tin (có id là "formFile"). 
+                  //Khi người dùng chọn một tệp tin, hàm xử lý sự kiện sẽ được gọi.
+                  document.getElementById('formFile').addEventListener('change', function() {
+                    const fakeFileDisplay = document.getElementById('fakeFileDisplay');
+                    // Hàm xử lý sự kiện kiểm tra xem có tệp tin nào được chọn hay không (this.files.length > 0). 
+                    //Nếu có, nó lấy tên của tệp tin đó và hiển thị nó trong phần tử có id là "fakeFileDisplay". 
+                    //Nếu không có tệp tin nào được chọn, nó hiển thị "Chưa chọn".
+                    const fileName = this.files.length > 0 ? this.files[0].name : 'Chưa chọn';
+                    fakeFileDisplay.textContent = fileName;
+                  });
+                </script>
+                
+
+                <div class="text-center">
+                  <!-- Đây là một nút gửi biểu mẫu với văn bản "LƯU THAY ĐỔI". Khi nút này được nhấp, 
+                  nó kích hoạt hàm redirectToTatCaSP() và sau đó trả về giá trị false để ngăn chặn hành vi mặc định của biểu mẫu.-->
+                  <button type="submit" class="btn btn-primary" onclick="redirectToTatCaSP(); return false;"">LƯU THAY ĐỔI</button>
+                  <!--Chức năng: Đây là một nút làm mới biểu mẫu với văn bản "HỦY BỎ". Khi nút này được nhấp, 
+                    nó kích hoạt hàm redirectToTatCaSP() để chuyển hướng đến trang HTML khác.-->
+                  <button type="reset" class="btn btn-secondary" onclick="redirectToTatCaSP()">HỦY BỎ</button>
+
+                  <script>
+                    //Đây là một đoạn mã JavaScript định nghĩa hàm redirectToTatCaSP(). 
+                    //Khi được gọi, hàm này sử dụng window.location.href để chuyển hướng đến trang HTML có đường dẫn là 'TatCaSanPham.html'.
+                    function redirectToTatCaSP() {
+                      // Chuyển hướng đến trang HTML khác
+                      window.location.href = 'TatCaSanPham.html';
+                    }
+                  </script>
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <!-- Kết thúc tạo form -->
+        <!-- Kết thúc Horizontal Form - Mẫu nhập liệu theo chiều ngang -->
+              
+    </section>
+
+  </main><!-- Kết thúc Phần chính -->
+
+  <!-- ======= Chân trang ======= -->
+    <footer id="footer" class="footer">
+      <!--Thẻ <strong> đánh dấu một vùng với văn bản được làm nổi bật hơn, và <span> được sử dụng để nhóm một phần của văn bản để áp dụng các hiệu ứng CSS hoặc xử lý bằng JavaScript. 
+        "Manis Jewelry" là tên đơn vị, và "All Rights Reserved" là thông điệp bảo vệ quyền sở hữu.-->
+      <div class="copyright">
+        &copy; Copyright <strong><span>Manis Jewelry</span></strong>. All Rights Reserved
+      </div>
+  
+    </footer><!-- Kết thúc chân trang -->
+  
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!--Link tới các thư viện bên ngoài-->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.min.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Tệp chính của trang web, chứa mã JavaScript tùy chỉnh và các tác vụ xử lý sự kiện. -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

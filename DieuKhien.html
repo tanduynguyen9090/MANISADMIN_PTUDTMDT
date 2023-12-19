@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"> <!-- Thiết lập bảng mã UTF-8 -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> <!-- Cấu hình hiển thị trên thiết bị di động -->
+  <title>DieuKhien-Admin</title> <!-- Tiêu đề trang web -->
+  <!-- Meta tags mô tả và từ khóa -->
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+   <!-- Favicons cho trình duyệt và thiết bị của Apple -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Liên kết đến các file CSS từ các thư viện khác nhau -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Liên kết đến file CSS chính của trang web -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap copy/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/datatables/datatables.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+  <!-- Template Information -->
+  <!-- Thông tin về template được sử dụng -->
+  <!-- Tên, phiên bản, URL, tác giả, và giấy phép -->
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+   <header id="header" class="header fixed-top d-flex align-items-center">
+    <!-- Phần container chứa các phần tử header -->
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="DieuKhien.html" class="logo d-flex align-items-center"> <!-- Liên kết đến trang chủ -->
+         <!-- Logo của trang web -->
+        <img width="230px" src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/385538843_734726671404802_8380323164681364303_n.png?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=vLsHRT2ljrwAX9ZqJc0&_nc_pt=1&_nc_ht=scontent.fsgn2-5.fna&oh=03_AdQbjj0ZjQyAbzdYn7f7m-zPD7vPH-G5TGqkjbjMOSem7Q&oe=65A49C01" alt="">
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i> <!-- Icon để mở/closed thanh sidebar (thanh bên) -->
+    </div>
+  </header> <!-- Kết thúc Header -->
+  
+  <aside id="sidebar" class="sidebar">
+    <!-- Phần Sidebar: Chứa các mục điều hướng -->
+       <ul class="sidebar-nav" id="sidebar-nav"> <!-- Danh sách mục điều hướng -->
+         <li class="nav-item">  <!-- Mục điều hướng cho Dashboard -->
+           <a class="nav-link " href="DieuKhien.html">
+             <i class="bi bi-grid"></i>
+             <span>Dashboard</span>
+           </a>
+         </li><!-- Kết thúc Dashboard Nav -->
+         <li class="nav-item"> <!-- Mục điều hướng cho Quản lý sản phẩm -->
+           <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-journal-text"></i><span>Quản lý sản phẩm</span><i class="bi bi-chevron-down ms-auto"></i>
+           </a>
+           <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+              <!-- Danh sách con cho Quản lý sản phẩm (collapsed) -->
+             <li> <!-- Mục con: Tất cả sản phẩm -->
+               <a href="TatCaSanPham.html">
+                 <i class="bi bi-circle"></i><span>Tất cả sản phẩm</span>
+               </a>
+             </li>
+             <li> <!-- Mục con: Thêm sản phẩm mới -->
+               <a href="ThemSP.html">
+                 <i class="bi bi-circle"></i><span>Thêm sản phẩm mới</span>
+               </a>
+             </li>
+           </ul>
+         </li><!-- Kết thúc Forms Nav -->
+          <!-- Mục điều hướng cho Quản lý mã giảm giá -->
+         <li class="nav-item">
+           <a class="nav-link collapsed" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-journal-text"></i><span>Quản lý mã giảm giá</span><i class="bi bi-chevron-down ms-auto"></i>
+           </a>
+           <!-- Danh sách con cho Quản lý mã giảm giá (collapsed) -->
+           <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <li> <!-- Mục con: Tất cả mã giảm giá -->
+               <a href="TatCaMaGiamGia.html">
+                 <i class="bi bi-circle"></i><span>Tất cả mã giảm giá</span>
+               </a>
+             </li>
+             <li><!-- Mục con: Thêm mã giảm giá -->
+               <a href="ThemMaGiamGia.html">
+                 <i class="bi bi-circle"></i><span>Thêm mã giảm giá</span>
+               </a>
+             </li>
+           </ul>
+         </li><!-- Kết thúc Forms Nav -->
+         <!-- Mục điều hướng cho Thống kê -->
+         <li class="nav-item">
+           <a class="nav-link collapsed" href="ThongKe.html">
+             <i class="bi bi-bar-chart"></i>
+             <span>Thống kê</span>
+           </a>
+         </li><!-- Kết thúc Sidebar Nav -->
+       </ul>
+     </aside><!-- Kết thúc Sidebar -->
+
+
+  <main id="main" class="main">
+
+    <div class="pagetitle"> <!--Tiêu đề trang web-->
+      <h1>TỔNG QUAN</h1>
+    </div>
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Cột bên trái -->
+        <div class="col-lg-12">
+          <div class="row">
+
+            <!-- Thẻ đơn hàng-->
+            <!--Ở kích thước lớn (xxl), thẻ sẽ chiếm 4/12 (1/3) của dòng. 
+              Ở kích thước trung bình (md), thẻ sẽ chiếm 6/12 (1/2) của dòng.-->
+            <div class="col-xxl-4 col-md-6">
+              <!--Một thẻ <div> với các lớp "card", "info-card", và "sales-card" để định dạng và trang trí thẻ là một "thẻ thông tin đơn hàng".-->
+              <div class="card info-card sales-card">
+                <!--Một thẻ con <div> với lớp "filter" để chứa nút điều khiển dropdown. Nút này sẽ hiển thị một menu dropdown khi được nhấp.-->
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Lọc</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+                    <li><a class="dropdown-item" href="#">Tháng</a></li>
+                    <li><a class="dropdown-item" href="#">Năm</a></li>
+                  </ul>
+                </div>
+                <!-- ... Nội dung thẻ ... -->
+                <div class="card-body">
+                  <h5 class="card-title">Đơn hàng <span>| Hôm nay</span></h5>
+                  <!-- ... Nội dung trong hàng ngang ... -->
+                  <div class="d-flex align-items-center">
+                    <!--Một thẻ con <div> với lớp "card-icon" để chứa biểu tượng của đơn hàng (trong trường hợp này, biểu tượng giỏ hàng). 
+                      Lớp "rounded-circle" làm tròn góc của thẻ. Sử dụng thẻ <i> để chứa biểu tượng từ thư viện Bootstrap Icons.-->
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-cart"></i>
+                    </div>
+                    <div class="ps-3">
+                      <!--Một thẻ con <div> với lớp "ps-3" để thêm padding bên trái (ps = padding-start).
+                        Chứa các phần tử khác như số lượng đơn hàng, phần trăm tăng, và các thông tin khác. -->
+                      <h6>45</h6>
+                      <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">tăng</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div><!-- Kết thúc thẻ đơn hàng-->
+
+            <!-- Thẻ doanh thu -->
+            <!-- Điều chỉnh như thẻ đơn hàng -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card revenue-card">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Lọc</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+                    <li><a class="dropdown-item" href="#">Tháng</a></li>
+                    <li><a class="dropdown-item" href="#">Năm</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Doanh thu <span>| Tháng</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-currency-dollar"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>25.364.000 VND</h6>
+                      <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">tăng</span>
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- Kết thúc thẻ doanh thu -->
+
+            <!-- Thẻ khách hàng -->
+            <div class="col-xxl-4 col-xl-12">
+              <!-- Đối với màn hình kích thước lớn (xxl), thẻ này sẽ chiếm 4/12 (1/3) của dòng.
+              Đối với màn hình kích thước extra-large (xl), thẻ này sẽ chiếm toàn bộ 12/12 (toàn bộ) của dòng.-->
+              <div class="card info-card customers-card">
+                <!-- Điều chỉnh như thẻ đơn hàng -->
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Lọc</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+                    <li><a class="dropdown-item" href="#">Tháng</a></li>
+                    <li><a class="dropdown-item" href="#">Năm</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Khách hàng <span>| Năm</span></h5>
+
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6>1133</h6>
+                      <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">giảm</span>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div><!-- Kết thúc thẻ khách hàng -->
+
+            <!-- Báo cáo -->
+            <!-- Đây là một div trong hệ thống grid của Bootstrap, cho biết nội dung bên trong nó sẽ chiếm toàn bộ 12 cột. 
+              Thường được sử dụng cho các phần tử chiếm toàn bộ chiều rộng.-->
+            <div class="col-12">
+              <div class="card">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Lọc</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+                    <li><a class="dropdown-item" href="#">Tháng</a></li>
+                    <li><a class="dropdown-item" href="#">Năm</a></li>
+                  </ul>
+                </div>
+                <!--Đây là tiêu đề của thẻ card. Nó bao gồm văn bản "Báo cáo" và "Hôm nay" làm phụ đề. 
+                  Thẻ <span> được sử dụng để thiết lập kiểu cho phụ đề, ví dụ như thay đổi màu hoặc kích thước font chữ.-->
+                <div class="card-body">
+                  <h5 class="card-title">Báo cáo <span>| Hôm nay</span></h5>
+
+                  <!-- Biểu đồ đường -->
+                  <div id="reportsChart"></div>
+
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                      new ApexCharts(document.querySelector("#reportsChart"), {
+                        series: [{
+                          name: 'Đơn hàng',
+                          data: [31, 40, 28, 51, 42, 82, 56],
+                        }, {
+                          name: 'Khách hàng',
+                          data: [15, 11, 32, 18, 9, 24, 11]
+                        }],
+                        chart: {
+                          height: 350,
+                          type: 'area',
+                          toolbar: {
+                            show: false
+                          },
+                        },
+                        markers: {
+                          size: 4
+                        },
+                        colors: ['#4154f1', '#2eca6a', '#ff771d'],
+                        fill: {
+                          type: "gradient",
+                          gradient: {
+                            shadeIntensity: 1,
+                            opacityFrom: 0.3,
+                            opacityTo: 0.4,
+                            stops: [0, 90, 100]
+                          }
+                        },
+                        dataLabels: {
+                          enabled: false
+                        },
+                        stroke: {
+                          curve: 'smooth',
+                          width: 2
+                        },
+                        xaxis: {
+                          type: 'datetime',
+                          categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+                        },
+                        tooltip: {
+                          x: {
+                            format: 'dd/MM/yy HH:mm'
+                          },
+                        }
+                      }).render();
+                    });
+                  </script>
+                  <!-- Kết thúc biểu đồ đường -->
+
+                </div>
+
+              </div>
+            </div><!-- Kết thúc báo cáo -->
+
+            <!-- báo cáo Đơn hàng -->
+            <!--Điều chỉnh như phần báo cáo-->
+            <div class="col-12">
+              <div class="card recent-sales overflow-auto">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Lọc</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+                    <li><a class="dropdown-item" href="#">Tháng</a></li>
+                    <li><a class="dropdown-item" href="#">Năm</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Đơn hàng <span>| Hôm nay</span></h5>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Mã đơn hàng</th>
+                        <th scope="col">Khách hàng</th>
+                        <th scope="col">Sản phẩm</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Giá trị</th>
+                        <th scope="col">Tình trạng</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#">#2457</a></th>
+                        <td>Dương Nhu Mỹ</td>
+                        <td><a href="#" class="text-primary">Dây Chuyền 925 Bông Tuyết Đính Đá</a></td>
+                        <td> 1 </td>
+                        <td>135.000VND</td>
+                        <td><span class="badge bg-success">Đã duyệt</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2147</a></th>
+                        <td>Trà My</td>
+                        <td><a href="#" class="text-primary">Bộ Sản Phẩm Bạc 925 Hồ Điệp Đa Sắc </a></td>
+                        <td> 1 </td>
+                        <td>258.000VND</td>
+                        <td><span class="badge bg-warning">Chờ duyệt</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2049</a></th>
+                        <td>Hồng Hạnh</td>
+                        <td><a href="#" class="text-primary">Dây chuyền 925 Cánh Thiên Thần Đổi Màu</a></td>
+                        <td> 1 </td>
+                        <td>185.000VND</td>
+                        <td><span class="badge bg-success">Đã duyệt</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2644</a></th>
+                        <td>Quỳnh Hiên</td>
+                        <td><a href="#" class="text-primary">Vòng Tay Bạc 925 Hình Mặt Trăng, Ngôi sao</a></td>
+                        <td> 2 </td>
+                        <td>330.000VND</td>
+                        <td><span class="badge bg-danger">Hủy</span></td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#">#2644</a></th>
+                        <td>Tấn Duy</td>
+                        <td><a href="#" class="text-primary">Nhẫn Bạc Trơn Biểu Tượng Vô Cực Cá Tính </a></td>
+                        <td> 1 </td>
+                        <td>105.000VND</td>
+                        <td><span class="badge bg-success">Đã duyệt</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- Kết thúc phần báo cáo đơn hàng -->
+
+            <!-- Top Bán chạy -->
+            <!--Điều chỉnh như phần đơn hàng-->
+            <div class="col-12">
+              <div class="card top-selling overflow-auto">
+
+                <div class="filter">
+                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                    <li class="dropdown-header text-start">
+                      <h6>Lọc</h6>
+                    </li>
+
+                    <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+                    <li><a class="dropdown-item" href="#">Tháng</a></li>
+                    <li><a class="dropdown-item" href="#">Năm</a></li>
+                  </ul>
+                </div>
+
+                <div class="card-body pb-0">
+                  <h5 class="card-title">Sản phẩm bán chạy <span>| Hôm nay</span></h5>
+
+                  <table class="table table-borderless datatable">
+                    <thead>
+                      <tr>
+                        <th scope="col">Hình</th>
+                        <th scope="col">Sản phẩm</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Số lượng</th>
+                        <th scope="col">Doanh thu</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Nhẫn Bạc Tròn Hở Basic Xinh Xắn</a></td>
+                        <td>100.000VND </td>
+                        <td class="fw-bold">9</td>
+                        <td>900.000VND</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp2.4.png" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Nhẫn Bạc Trơn Biểu Tượng Vô Cực Cá Tính</a></td>
+                        <td>105.000VNĐ</td>
+                        <td class="fw-bold">7</td>
+                        <td>735.000VND</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/Thiet-ke-chua-co-ten-20.png" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Khuyên tai Bạc 925 Cỏ 4 Lá Đính Đá</a></td>
+                        <td>125.000VND</td>
+                        <td class="fw-bold">6</td>
+                        <td>750.000VND</td>
+                      </tr>
+                      <tr>
+                        <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/VT003.1.png" alt=""></a></th>
+                        <td><a href="#" class="text-primary fw-bold">Vòng Tay Bạc 925 Hồ Điệp Đá Đa Sắc</a></td>
+                        <td>105.000VND</td>
+                        <td class="fw-bold">5</td>
+                        <td>525.000VND</td>
+                      </tr>
+                  </table>
+
+                </div>
+
+              </div>
+            </div><!-- Kết thúc top bán chạy -->
+
+          </div>
+        </div><!-- Kết thúc cột bên trái -->
+      </div>
+    </section>
+
+  </main><!-- Phần chính -->
+
+  <!-- ======= Chân trang ======= -->
+    <footer id="footer" class="footer">
+      <!--Thẻ <strong> đánh dấu một vùng với văn bản được làm nổi bật hơn, và <span> được sử dụng để nhóm một phần của văn bản để áp dụng các hiệu ứng CSS hoặc xử lý bằng JavaScript. 
+        "Manis Jewelry" là tên đơn vị, và "All Rights Reserved" là thông điệp bảo vệ quyền sở hữu.-->
+      <div class="copyright">
+        &copy; Copyright <strong><span>Manis Jewelry</span></strong>. All Rights Reserved
+      </div>
+  
+    </footer><!-- Kết thúc chân trang -->
+  
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!--Link tới các thư viện bên ngoài-->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.min.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Tệp chính của trang web, chứa mã JavaScript tùy chỉnh và các tác vụ xử lý sự kiện. -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

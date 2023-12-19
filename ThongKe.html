@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>ThongKe-Admin</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap Datepicker CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+<!-- Bootstrap Datepicker JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+  <!-- Meta tags mô tả và từ khóa -->
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+   <!-- Favicons cho trình duyệt và thiết bị của Apple -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Liên kết đến các file CSS từ các thư viện khác nhau -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Liên kết đến file CSS chính của trang web -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap copy/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/datatables/datatables.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+  <!-- Template Information -->
+  <!-- Thông tin về template được sử dụng -->
+  <!-- Tên, phiên bản, URL, tác giả, và giấy phép -->
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+<body>
+
+   <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <!-- Phần container chứa các phần tử header -->
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="DieuKhien.html" class="logo d-flex align-items-center"> <!-- Liên kết đến trang chủ -->
+         <!-- Logo của trang web -->
+        <img width="230px" src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/385538843_734726671404802_8380323164681364303_n.png?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=vLsHRT2ljrwAX9ZqJc0&_nc_pt=1&_nc_ht=scontent.fsgn2-5.fna&oh=03_AdQbjj0ZjQyAbzdYn7f7m-zPD7vPH-G5TGqkjbjMOSem7Q&oe=65A49C01" alt="">
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i> <!-- Icon để mở/closed thanh sidebar (thanh bên) -->
+    </div>
+  </header> <!-- Kết thúc Header -->
+
+  <aside id="sidebar" class="sidebar">
+    <!-- Phần Sidebar: Chứa các mục điều hướng -->
+       <ul class="sidebar-nav" id="sidebar-nav"> <!-- Danh sách mục điều hướng -->
+         <li class="nav-item ">  <!-- Mục điều hướng cho Dashboard -->
+           <a class="nav-link collapsed " href="DieuKhien.html">
+             <i class="bi bi-grid"></i>
+             <span>Dashboard</span>
+           </a>
+         </li><!-- Kết thúc Dashboard Nav -->
+         <li class="nav-item"> <!-- Mục điều hướng cho Quản lý sản phẩm -->
+           <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-journal-text"></i><span>Quản lý sản phẩm</span><i class="bi bi-chevron-down ms-auto"></i>
+           </a>
+           <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+              <!-- Danh sách con cho Quản lý sản phẩm (collapsed) -->
+             <li> <!-- Mục con: Tất cả sản phẩm -->
+               <a href="TatCaSanPham.html">
+                 <i class="bi bi-circle"></i><span>Tất cả sản phẩm</span>
+               </a>
+             </li>
+             <li> <!-- Mục con: Thêm sản phẩm mới -->
+               <a href="ThemSP.html">
+                 <i class="bi bi-circle"></i><span>Thêm sản phẩm mới</span>
+               </a>
+             </li>
+           </ul>
+         </li><!-- Kết thúc Forms Nav -->
+          <!-- Mục điều hướng cho Quản lý mã giảm giá -->
+         <li class="nav-item">
+           <a class="nav-link collapsed" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-journal-text"></i><span>Quản lý mã giảm giá</span><i class="bi bi-chevron-down ms-auto"></i>
+           </a>
+           <!-- Danh sách con cho Quản lý mã giảm giá (collapsed) -->
+           <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <li> <!-- Mục con: Tất cả mã giảm giá -->
+               <a href="TatCaMaGiamGia.html">
+                 <i class="bi bi-circle"></i><span>Tất cả mã giảm giá</span>
+               </a>
+             </li>
+             <li><!-- Mục con: Thêm mã giảm giá -->
+               <a href="ThemMaGiamGia.html">
+                 <i class="bi bi-circle"></i><span>Thêm mã giảm giá</span>
+               </a>
+             </li>
+           </ul>
+         </li><!-- Kết thúc Forms Nav -->
+         <!-- Mục điều hướng cho Thống kê -->
+         <li class="nav-item">
+           <a class="nav-link " href="ThongKe.html">
+             <i class="bi bi-bar-chart"></i>
+             <span>Thống kê</span>
+           </a>
+         </li><!-- Kết thúc Sidebar Nav -->
+       </ul>
+     </aside><!-- Kết thúc Sidebar -->
+     <!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>THỐNG KÊ</h1>
+      
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="card-body">
+                  <div class="col-lg-6">
+                    <h5 class="card-title">Thống kê đơn hàng </h5>
+                  </div>
+                  <!-- Pie Chart -->
+                  <canvas id="pieChart" style="max-height: 400px;"></canvas>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                    new Chart(document.querySelector('#pieChart'), {
+                      type: 'pie',
+                      data: {
+                        labels: [
+                        'Đã giao',
+                        'Đang giao',
+                        'Chờ xử lý',
+                        'Hủy'],
+                      datasets: [{
+                        label: 'My First Dataset',
+                        data: [300, 50, 20,80],
+                        backgroundColor: [
+                          '#33CC33',
+                          '#0099FF',
+                          '#FFCC00',
+                          '#FF3333'],
+                        hoverOffset: 4}]
+                      }});
+                    });
+                  </script>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="card-body">
+                  <div class="col-lg-6">
+                    <h5 class="card-title">Tùy chọn lọc</h5>
+                  </div>
+                <table class="table">
+                  <tr>
+                      <td>
+                          <label>
+                              <input type="radio" name="filterType" value="day"> Ngày
+                              <!-- Phần tử nhập liệu radio, có các thuộc tính như:
+                                "type": Là "radio", ngụ ý rằng đây là một nút radio.
+                                "name": Là "filterType", đặt tên cho nhóm nút radio. Các nút radio cùng tên sẽ tạo thành một nhóm, chỉ cho phép chọn một nút trong nhóm đó.
+                                "value": Là "day", giá trị sẽ được gửi đi khi nút radio này được chọn.
+                                "Ngày": Text hiển thị kèm theo nút radio, mô tả ý nghĩa hoặc tùy chọn của nút radio.-->
+                          </label>
+                      </td>
+                  </tr>
+                  <!-- Dòng trong bảng với ID là "dayFilterRow" và kiểu hiển thị là "none" (ẩn đi) ban đầu. 
+                    Điều này có nghĩa là khi trang được tải, dòng này sẽ không được hiển thị.-->
+                  <tr id="dayFilterRow" style="display: none;">
+                      <td>
+                        <!-- Một phần tử <div> với lớp "input-group" và "date". Lớp "input-group" thường được sử dụng để nhóm các phần tử đầu vào lại với nhau. 
+                          Thuộc tính "data-provide" được sử dụng để chỉ định loại dữ liệu mà nó cung cấp, trong trường hợp này là "datepicker".-->
+                          <div class="input-group date" data-provide="datepicker">
+                            <!--Ô nhập liệu với kiểu là "text". ID và name của nó là "dayFilter". Lớp "form-control" là một lớp của Bootstrap để cải thiện giao diện người dùng. 
+                              Thuộc tính "data-date-end-date" được sử dụng để chỉ định ngày kết thúc tối đa mà người dùng có thể chọn, trong trường hợp này là "0d" (ngày hiện tại). 
+                              Placeholder là văn bản xuất hiện trong ô nhập liệu khi nó trống rỗng.-->
+                              <input type="text" id="dayFilter" name="dayFilter" class="form-control" data-date-end-date="0d" placeholder="Chọn ngày">
+                              <!-- Một phần tử <div> với lớp "input-group-addon". Trong trường hợp này, 
+                                nó được sử dụng để thêm một biểu tượng "th" (icon lịch) vào ô nhập liệu.-->
+                              <div class="input-group-addon">
+                                <!--Một phần tử <span> với lớp "glyphicon glyphicon-th". 
+                                  Trong Bootstrap, các biểu tượng như "th" được triển khai thông qua các lớp CSS cụ thể.-->
+                                  <span class="glyphicon glyphicon-th"></span>
+                              </div>
+                          </div>
+                      </td>
+                  </tr>
+                  <!--Chỉnh như bên trên-->
+                  <tr>
+                      <td>
+                          <label>
+                              <input type="radio" name="filterType" value="month"> Tháng
+                          </label>
+                      </td>
+                  </tr>
+                  <tr id="monthFilterRow" style="display: none;">
+                      <td>
+                          <div class="input-group date month-datepicker" data-provide="datepicker">
+                              <input type="text" id="monthFilter" name="monthFilter" class="form-control" data-date-start-view="year" data-date-min-view-mode="months" data-date-end-date="0d" placeholder="Chọn tháng">
+                              <div class="input-group-addon">
+                                  <span class="glyphicon glyphicon-th"></span>
+                              </div>
+                          </div>
+                      </td>
+                  </tr>
+                   <!--Chỉnh như bên trên-->
+                  <tr>
+                      <td>
+                          <label>
+                              <input type="radio" name="filterType" value="custom"> Tùy chỉnh
+                          </label>
+                      </td>
+                  </tr>
+                   <!--Chỉnh như bên trên-->
+                  <tr id="customDateRow" style="display: none;">
+                      <td>
+                          <div class="input-group date" data-provide="datepicker">
+                              <input type="text" id="startDate" name="startDate" class="form-control" data-date-end-date="0d" placeholder="Chọn ngày bắt đầu" >
+                              <div class="input-group-addon">
+                                  <span class="glyphicon glyphicon-th"></span>
+                              </div>
+                          </div>
+                          <br>
+                          <div class="input-group date" data-provide="datepicker">
+                              <input type="text" id="endDate" name="endDate" class="form-control" data-date-end-date="0d" placeholder="Chọn ngày kết thúc">
+                              <div class="input-group-addon">
+                                  <span class="glyphicon glyphicon-th"></span>
+                              </div>
+                          </div>
+                      </td>
+                  </tr>
+                  <style>
+                    /* Đặt z-index cho phần tử .datepicker làm cho phần tử xuất hiện trên hoặc dưới các phần tử khác dựa trên giá trị của nó. 
+                    Trong trường hợp này, giá trị là 9999, là một số lớn, đặt phần tử có lớp là .datepicker lên trên cùng của các phần tử khác.
+                    Khi có !important, quy tắc này sẽ được ưu tiên hơn các quy tắc không có !important. */
+                    .datepicker {
+                      z-index: 9999 !important;
+                    }
+                    /* Áp dụng CSS cho nút Áp dụng */
+                    button.apply-button {
+                        background-color: #6776f4;
+                        color: white;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        
+                        /* Hiệu ứng khi hover */
+                        transition: background-color 0.3s ease;
+                    }
+            
+                    /* Hiệu ứng khi hover */
+                    button.apply-button:hover {
+                        background-color: #4154f1;
+                    }
+            
+                    /* Hiệu ứng khi click */
+                    button.apply-button:active {
+                        background-color: #012970;
+                    }
+            
+                    /* Áp dụng CSS cho nút Xóa lựa chọn */
+                    button.clear-button {
+                        background-color: #f44336;
+                        color: white;
+                        padding: 10px 20px;
+                        border: none;
+                        border-radius: 10px;
+                        cursor: pointer;
+            
+                        /* Hiệu ứng khi hover */
+                        transition: background-color 0.3s ease;
+                    }
+            
+                    /* Hiệu ứng khi hover */
+                    button.clear-button:hover {
+                        background-color: #d32f2f;
+                    }
+            
+                    /* Hiệu ứng khi click */
+                    button.clear-button:active {
+                        background-color: #b71c1c;
+                    }
+                </style>
+                  <tr>
+                    <td colspan="1">
+                      <!-- Thêm class cho mỗi nút để áp dụng CSS -->
+                      <button class="apply-button" onclick="applyFilter()">Áp dụng</button>
+                      <button class="clear-button" onclick="clearFilters()">Xóa lựa chọn</button>
+                  </td>
+                  </tr>
+              </table>
+              
+              <script>
+                // Sử dụng Bootstrap Datepicker cho Tháng và Ngày
+                $(document).ready(function () {
+                    $('.month-datepicker').datepicker({
+                        format: 'mm/yyyy',
+                        autoclose: true,
+                        minViewMode: 'months',
+                        startView: 'year',
+                        endDate: '0d'
+                    });
+                    $('.input-group.date').datepicker({
+                        format: 'dd/mm/yyyy',
+                        autoclose: true,
+                        todayHighlight: true,
+                        endDate: '0d'
+                    });
+                    
+                    // JavaScript để ẩn/hiện dropdown khi chọn loại bộ lọc
+                    $('input[name="filterType"]').change(function () {
+                        if ($(this).val() === 'day') {
+                            $('#dayFilterRow').show();
+                            $('#monthFilterRow').hide();
+                            $('#customDateRow').hide();
+                        } else if ($(this).val() === 'month') {
+                            $('#dayFilterRow').hide();
+                            $('#monthFilterRow').show();
+                            $('#customDateRow').hide();
+                        } else if ($(this).val() === 'custom') {
+                            $('#dayFilterRow').hide();
+                            $('#monthFilterRow').hide();
+                            $('#customDateRow').show();
+                        }
+                    });
+                });
+                function clearFilters() {
+        // Xóa lựa chọn của các ô radio và đặt giá trị của các ô input về rỗng
+        $('input[name="filterType"]').prop('checked', false);
+        $('#dayFilter, #monthFilter, #startDate, #endDate').val('');
+    }
+                function applyFilter() {
+                    // Xử lý áp dụng bộ lọc ở đây
+                    alert('Bộ lọc đã được áp dụng!');
+                }
+            </script>
+            </div>
+          </div>
+        </div>
+
+        <!--Thống kê đơn hàng-->
+         <!--Chỉnh như bên trang điều kiển-->
+        <div class="col-lg-12">
+          <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Đơn hàng <span>| Hôm nay
+              
+                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <li class="dropdown-header text-start">
+                    <h6>Lọc</h6>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+                  <li><a class="dropdown-item" href="#">Tháng</a></li>
+                  <li><a class="dropdown-item" href="#">Năm</a></li>
+                </ul>
+            </span></h5>
+
+            <table class="table table-borderless datatable">
+              <thead>
+                <tr>
+                  <th scope="col">Mã đơn hàng</th>
+                  <th scope="col">Khách hàng</th>
+                  <th scope="col">Sản phẩm</th>
+                  <th scope="col">Số lượng</th>
+                  <th scope="col">Giá trị</th>
+                  <th scope="col">Tình trạng</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row"><a href="#">#2457</a></th>
+                  <td>Dương Nhu Mỹ</td>
+                  <td><a href="#" class="text-primary">Dây Chuyền 925 Bông Tuyết Đính Đá</a></td>
+                  <td> 1 </td>
+                  <td>135.000VND</td>
+                  <td><span class="badge bg-success">Đã duyệt</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="#">#2147</a></th>
+                  <td>Trà My</td>
+                  <td><a href="#" class="text-primary">Bộ Sản Phẩm Bạc 925 Hồ Điệp Đa Sắc </a></td>
+                  <td> 1 </td>
+                  <td>258.000VND</td>
+                  <td><span class="badge bg-warning">Chờ duyệt</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="#">#2049</a></th>
+                  <td>Hồng Hạnh</td>
+                  <td><a href="#" class="text-primary">Dây chuyền 925 Cánh Thiên Thần Đổi Màu</a></td>
+                  <td> 1 </td>
+                  <td>185.000VND</td>
+                  <td><span class="badge bg-success">Đã duyệt</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="#">#2644</a></th>
+                  <td>Quỳnh Hiên</td>
+                  <td><a href="#" class="text-primary">Vòng Tay Bạc 925 Hình Mặt Trăng, Ngôi sao</a></td>
+                  <td> 2 </td>
+                  <td>330.000VND</td>
+                  <td><span class="badge bg-danger">Hủy</span></td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="#">#2644</a></th>
+                  <td>Tấn Duy</td>
+                  <td><a href="#" class="text-primary">Nhẫn Bạc Trơn Biểu Tượng Vô Cực Cá Tính </a></td>
+                  <td> 1 </td>
+                  <td>105.000VND</td>
+                  <td><span class="badge bg-success">Đã duyệt</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+        </div>
+      </div>
+      <!--Kết thúc thống kê đơn hàng-->
+
+      <!--Thống kê sản phẩm bán chạy-->
+       <!--Chỉnh như bên trang điều kiển-->
+      <section class="section dashboard">
+      <div class="col-12">
+        <div class="card top-selling overflow-auto">
+
+          <div class="card-body pb-0">
+            <h5 class="card-title">Sản phẩm bán chạy <span>| Hôm nay
+              <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+              <li class="dropdown-header text-start">
+                <h6>Lọc</h6>
+              </li>
+
+              <li><a class="dropdown-item" href="#">Hôm nay</a></li>
+              <li><a class="dropdown-item" href="#">Tháng</a></li>
+              <li><a class="dropdown-item" href="#">Năm</a></li>
+            </ul>
+            </span></h5>
+
+            <table class="table table-borderless datatable">
+              <thead>
+                <tr>
+                  <th scope="col">Hình</th>
+                  <th scope="col">Sản phẩm</th>
+                  <th scope="col">Giá</th>
+                  <th scope="col">Số lượng</th>
+                  <th scope="col">Doanh thu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp1-1.jpg" alt=""></a></t>
+                  <td><a href="#" class="text-primary fw-bold">Nhẫn Bạc Tròn Hở Basic Xinh Xắn</a></td>
+                  <td>100.000VND </td>
+                  <td class="fw-bold">9</td>
+                  <td>900.000VND</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/sp2.4.png" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Nhẫn Bạc Trơn Biểu Tượng Vô Cực Cá Tính</a></td>
+                  <td>105.000VNĐ</td>
+                  <td class="fw-bold">7</td>
+                  <td>735.000VND</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/Thiet-ke-chua-co-ten-20.png" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Khuyên tai Bạc 925 Cỏ 4 Lá Đính Đá</a></td>
+                  <td>125.000VND</td>
+                  <td class="fw-bold">6</td>
+                  <td>750.000VND</td>
+                </tr>
+                <tr>
+                  <th scope="row"><a href="#"><img src="http://manisjewelry.store/wp-content/uploads/2023/11/VT003.1.png" alt=""></a></th>
+                  <td><a href="#" class="text-primary fw-bold">Vòng Tay Bạc 925 Hồ Điệp Đá Đa Sắc</a></td>
+                  <td>105.000VND</td>
+                  <td class="fw-bold">5</td>
+                  <td>525.000VND</td>
+                </tr>
+            </table>
+
+          </div>
+
+        </div>
+      </div>
+      
+  </main><!-- Kết thúc Phần chính -->
+
+  <!-- ======= Chân trang ======= -->
+    <footer id="footer" class="footer">
+      <!--Thẻ <strong> đánh dấu một vùng với văn bản được làm nổi bật hơn, và <span> được sử dụng để nhóm một phần của văn bản để áp dụng các hiệu ứng CSS hoặc xử lý bằng JavaScript. 
+        "Manis Jewelry" là tên đơn vị, và "All Rights Reserved" là thông điệp bảo vệ quyền sở hữu.-->
+      <div class="copyright">
+        &copy; Copyright <strong><span>Manis Jewelry</span></strong>. All Rights Reserved
+      </div>
+  
+    </footer><!-- Kết thúc chân trang -->
+  
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!--Link tới các thư viện bên ngoài-->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.min.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Tệp chính của trang web, chứa mã JavaScript tùy chỉnh và các tác vụ xử lý sự kiện. -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

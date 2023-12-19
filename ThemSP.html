@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8"> <!-- Thiết lập bảng mã UTF-8 -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> <!-- Cấu hình hiển thị trên thiết bị di động -->
+  <title>ThemSanPham-Admin</title> <!-- Tiêu đề trang web -->
+  <!-- Meta tags mô tả và từ khóa -->
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+   <!-- Favicons cho trình duyệt và thiết bị của Apple -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Liên kết đến các file CSS từ các thư viện khác nhau -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Liên kết đến file CSS chính của trang web -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="assets/vendor/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap copy/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/datatables/datatables.min.css" rel="stylesheet">
+    <link href="assets/css/master.css" rel="stylesheet">
+  <!-- Template Information -->
+  <!-- Thông tin về template được sử dụng -->
+  <!-- Tên, phiên bản, URL, tác giả, và giấy phép -->
+  <!-- =======================================================
+  * Template Name: NiceAdmin - v2.4.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+   <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <!-- Phần container chứa các phần tử header -->
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="DieuKhien.html" class="logo d-flex align-items-center"> <!-- Liên kết đến trang chủ -->
+         <!-- Logo của trang web -->
+        <img width="230px" src="https://scontent.fsgn2-5.fna.fbcdn.net/v/t1.15752-9/385538843_734726671404802_8380323164681364303_n.png?_nc_cat=104&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=vLsHRT2ljrwAX9ZqJc0&_nc_pt=1&_nc_ht=scontent.fsgn2-5.fna&oh=03_AdQbjj0ZjQyAbzdYn7f7m-zPD7vPH-G5TGqkjbjMOSem7Q&oe=65A49C01" alt="">
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i> <!-- Icon để mở/closed thanh sidebar (thanh bên) -->
+    </div>
+  </header> <!-- Kết thúc Header -->
+
+  <aside id="sidebar" class="sidebar">
+    <!-- Phần Sidebar: Chứa các mục điều hướng -->
+       <ul class="sidebar-nav" id="sidebar-nav"> <!-- Danh sách mục điều hướng -->
+         <li class="nav-item">  <!-- Mục điều hướng cho Dashboard -->
+           <a class="nav-link collapsed" href="DieuKhien.html">
+             <i class="bi bi-grid"></i>
+             <span>Dashboard</span>
+           </a>
+         </li><!-- Kết thúc Dashboard Nav -->
+         <li class="nav-item"> <!-- Mục điều hướng cho Quản lý sản phẩm -->
+           <a class="nav-link " data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-journal-text"></i><span>Quản lý sản phẩm</span><i class="bi bi-chevron-down ms-auto"></i>
+           </a>
+           <ul id="forms-nav" class="nav-content collapsed " data-bs-parent="#sidebar-nav">
+              <!-- Danh sách con cho Quản lý sản phẩm (collapsed) -->
+             <li> <!-- Mục con: Tất cả sản phẩm -->
+               <a href="TatCaSanPham.html">
+                 <i class="bi bi-circle"></i><span>Tất cả sản phẩm</span>
+               </a>
+             </li>
+             <li> <!-- Mục con: Thêm sản phẩm mới -->
+               <a href="ThemSP.html" class="active">
+                 <i class="bi bi-circle"></i><span>Thêm sản phẩm mới</span>
+               </a>
+             </li>
+           </ul>
+         </li><!-- Kết thúc Forms Nav -->
+          <!-- Mục điều hướng cho Quản lý mã giảm giá -->
+         <li class="nav-item">
+           <a class="nav-link collapsed" data-bs-target="#forms-nav1" data-bs-toggle="collapse" href="#">
+             <i class="bi bi-journal-text"></i><span>Quản lý mã giảm giá</span><i class="bi bi-chevron-down ms-auto"></i>
+           </a>
+           <!-- Danh sách con cho Quản lý mã giảm giá (collapsed) -->
+           <ul id="forms-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+             <li> <!-- Mục con: Tất cả mã giảm giá -->
+               <a href="TatCaMaGiamGia.html">
+                 <i class="bi bi-circle"></i><span>Tất cả mã giảm giá</span>
+               </a>
+             </li>
+             <li><!-- Mục con: Thêm mã giảm giá -->
+               <a href="ThemMaGiamGia.html">
+                 <i class="bi bi-circle"></i><span>Thêm mã giảm giá</span>
+               </a>
+             </li>
+           </ul>
+         </li><!-- Kết thúc Forms Nav -->
+         <!-- Mục điều hướng cho Thống kê -->
+         <li class="nav-item">
+           <a class="nav-link collapsed" href="ThongKe.html">
+             <i class="bi bi-bar-chart"></i>
+             <span>Thống kê</span>
+           </a>
+         </li><!-- Kết thúc Sidebar Nav -->
+       </ul>
+     </aside><!-- Kết thúc Sidebar -->
+     <!-- Đây là phần chính của trang, có id="main" để có thể thực hiện các tác vụ JavaScript nếu cần.-->
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>THÊM SẢN PHẨM MỚI</h1>
+    </div><!-- Kết thúc tiêu đề trang -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="card">
+            <!--Phần thân của thẻ card, nơi chứa nội dung của thẻ.-->
+            <div class="card-body">
+              <h5 class="card-title"></h5><!--Tiêu đề thẻ-->
+              <form> <!--Thẻ biểu mẫu HTML, nơi người dùng có thể nhập thông tin.-->
+                <div class="row mb-3"> <!-- Một hàng trong biểu mẫu, sử dụng hệ thống grid của Bootstrap. Có thể thêm nhiều hàng như mong muốn.-->
+                  <!--Nhãn cho trường nhập liệu với for liên kết với trường nhập liệu có id="inputText". 
+              Được thiết lập để chiếm 2/12 (2/12) của grid cho kích thước màn hình lớn (lg) trở lên.-->
+                  <label for="inputText" class="col-sm-2 col-form-label" >Tên sản phẩm</label>
+                  <!-- Cột chứa trường nhập liệu, chiếm 10/12 của grid cho kích thước màn hình lớn (lg) trở lên.-->
+                  <div class="col-sm-10">
+                    <!--Trường nhập liệu kiểu văn bản cho mã giảm giá. Lớp "form-control" là lớp của Bootstrap để cải thiện giao diện người dùng.-->
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <!--Chỉnh như bên trên-->
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Mã SKU</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <!--Chỉnh như bên trên-->
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Mô tả sản phẩm</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" style="height: 100px"></textarea>
+                  </div>
+                </div>
+
+                <!--Chỉnh như bên trên-->
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Số lượng sản phẩm</label>
+                  <div class="col-sm-10">
+                    <input type="number" class="form-control">
+                  </div>
+                </div>
+
+                <!--Chỉnh như bên trên-->
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Giá sản phẩm</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+
+                <!--Chỉnh như bên trên-->
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Giá khuyến mãi</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                
+                <!--Chỉnh như bên trên-->
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Danh mục sản phẩm</label>
+                  <div class="col-sm-10">
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Chọn danh mục sản phẩm</option>
+                      <option value="1">Dây chuyền</option>
+                      <option value="2">Vòng tay</option>
+                      <option value="3">Nhẫn</option>
+                      <option value="3">Khuyên tai</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <!--Chỉnh như bên trên-->
+                <div class="row mb-3">
+                  <label for="formFile" class="col-sm-2 col-form-label">Hình ảnh sản phẩm</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" type="file" id="formFile">
+                  </div>
+                </div>
+                <!--Phần tử div với lớp "text-center" để căn giữa nội dung bên trong.-->
+                <div class="text-center">
+                  <!--Nút "THÊM SẢN PHẨM" được tạo ra. Loại nút là "submit", điều này thường được sử dụng trong các biểu mẫu để gửi dữ liệu. 
+                    Nút có lớp "btn btn-primary" để áp dụng kiểu màu chủ đạo (primary) của Bootstrap.-->
+                  <button type="submit" class="btn btn-primary">THÊM SẢN PHẨM</button>
+                  <!--Nút "HỦY BỎ" được tạo ra. Loại nút là "reset", điều này thường được sử dụng để làm mới biểu mẫu. 
+                    Nút có lớp "btn btn-secondary" để áp dụng kiểu màu phụ (secondary) của Bootstrap.-->
+                  <button type="reset" class="btn btn-secondary">HỦY BỎ</button>
+                </div>
+              </form>
+            </div>
+          </div>
+    </section>
+
+  </main><!-- Kết thúc Phần chính -->
+
+  <!-- ======= Chân trang ======= -->
+    <footer id="footer" class="footer">
+      <!--Thẻ <strong> đánh dấu một vùng với văn bản được làm nổi bật hơn, và <span> được sử dụng để nhóm một phần của văn bản để áp dụng các hiệu ứng CSS hoặc xử lý bằng JavaScript. 
+        "Manis Jewelry" là tên đơn vị, và "All Rights Reserved" là thông điệp bảo vệ quyền sở hữu.-->
+      <div class="copyright">
+        &copy; Copyright <strong><span>Manis Jewelry</span></strong>. All Rights Reserved
+      </div>
+  
+    </footer><!-- Kết thúc chân trang -->
+  
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  
+    <!--Link tới các thư viện bên ngoài-->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/chart.js/chart.min.js"></script>
+    <script src="assets/vendor/echarts/echarts.min.js"></script>
+    <script src="assets/vendor/quill/quill.min.js"></script>
+    <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Tệp chính của trang web, chứa mã JavaScript tùy chỉnh và các tác vụ xử lý sự kiện. -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
